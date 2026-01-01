@@ -111,7 +111,7 @@ mod tests {
         EmailClient::new(
             base_url,
             email(),
-            SecretString::new(Faker.fake::<String>().into_boxed_str()),
+            SecretString::new(Faker.fake::<String>().into()),
             std::time::Duration::from_millis(200),
         )
     }
