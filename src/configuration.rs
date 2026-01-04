@@ -9,6 +9,7 @@ pub struct Settings {
     pub database: DatabaseSettings,
     pub application: ApplicationSettings,
     pub email_client: EmailClientSettings,
+    pub redis_uri: SecretString,
 }
 
 #[derive(Clone, serde::Deserialize)]
@@ -35,6 +36,7 @@ pub struct ApplicationSettings {
     pub port: u16,
     pub host: String,
     pub base_url: String,
+    pub hmac_secret: SecretString,
 }
 
 #[derive(Clone, serde::Deserialize)]
