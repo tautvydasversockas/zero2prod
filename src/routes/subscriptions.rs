@@ -1,8 +1,8 @@
 use crate::{
     domain::{NewSubscriber, SubscriberEmail, SubscriberName},
     email_client::EmailClient,
-    routes::error_chain_fmt,
     startup::ApplicationBaseUrl,
+    utils::error_chain_fmt,
 };
 use actix_web::{HttpResponse, ResponseError, http::StatusCode, web};
 use anyhow::Context;
